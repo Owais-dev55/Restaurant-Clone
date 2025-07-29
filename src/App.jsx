@@ -6,7 +6,7 @@ import Hometwolayout from "./layout/Hometwolayout";
 import Homethreelayout from "./layout/Homethreelayout";
 import Homethree from "./pages/Homethree";
 import Homeone from "./pages/Homeone";
-import Reservation from ".pages/Reservation.jsx"
+import Reservation from "./pages/Reservation.jsx"
 function App() {
   return (
     <div className="App">
