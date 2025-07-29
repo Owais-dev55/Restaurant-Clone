@@ -7,6 +7,7 @@ import Homethreelayout from "./layout/Homethreelayout";
 import Homethree from "./pages/Homethree";
 import Homeone from "./pages/Homeone";
 import Reservation from "./pages/Reservation.jsx"
+import Blog from "./pages/Blog";
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
         <Route element={<GeneralLayout />}>
           <Route path="/home-1" element={<Homeone />} />
           <Route path="/reservation" element={<Reservation />} />
+          <Route path="/blog" element={<Blog />} />
         </Route>
 
         {/* home-three Layout */}
