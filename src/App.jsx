@@ -1,20 +1,36 @@
-import React from "react";
-// import Headerone from "./components/Headerone";
-import Headertwo from "./components/Headertwo";
-// import Headerthree from "./components/Headerthree";
-import Footer from "./components/Footer";
+  import Footer from "./components/Footer";
+  import { Route, Routes } from "react-router-dom";
+  import GeneralLayout from "./layout/GeneralLayout";
+  import Hometwo from "./pages/Hometwo";
+import Hometwolayout from "./layout/Hometwolayout";
+import Homethreelayout from "./layout/Homethreelayout";
+import Homethree from "./pages/Homethree";
+import Homeone from "./pages/Homeone";
 
+  function App() {
+    return (
+      <div className="App">
+        <Routes>
+          
+          {/* Home-two Layout */}
+          <Route element={<Hometwolayout />}>
+            <Route path="/" element={<Hometwo />} />
+          </Route>
 
-function App() {
-  return (
-    <div className="App">
-      {/* <Headerone /> */}
-      <Headertwo/>
-      {/* <Headerthree/> */}
-      <Footer/>
-      {/* Add more sections here like Hero, About, Menu, etc. */}
-    </div>
-  );
-}
+          {/* General Layout */}
+          <Route element={<GeneralLayout />}>
+            <Route path="/home-1" element={<Homeone />} />
+          </Route>
 
-export default App;
+          {/* home-three Layout */}
+          <Route element={<Homethreelayout />}> 
+            <Route path="/home-3" element={<Homethree  />} />
+          </Route>
+
+        </Routes>
+        <Footer />
+      </div>
+    );
+  }
+
+  export default App;
