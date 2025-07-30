@@ -9,6 +9,7 @@ import Homeone from "./pages/Homeone";
 import Reservation from "./pages/Reservation.jsx"
 import Blog from "./pages/Blog";
 import Gallery from "./pages/Gallery";
+import BlogDetails from "./pages/BlogDetails";
 function App() {
   return (
     <div className="App">
@@ -24,6 +25,7 @@ function App() {
           <Route path="/reservation" element={<Reservation />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/blog-detail/:id" element={<BlogDetails />} />
         </Route>
 
         {/* home-three Layout */}

@@ -2,44 +2,8 @@ import React from "react";
 import imgUrl from "../assets/bg.jpg";
 import { TopComp } from "./Reservation";
 import { CtaBanner } from "./Reservation";
-const blogData = [
-  {
-    id: 1,
-    category: "Foodies",
-    calenader: "24 Feb, 2024",
-    whoPost: "admin",
-    title: "Iconic Establishments Are Reinventing",
-    description:
-      "Efficiently reinvent installed base opportunities after team driven quality vectors. Dramatically for value added partnerships. Holisticly reintermediate client based materials...",
-  },
-  {
-    id: 2,
-    category: "Foodies",
-    calenader: "24 Feb, 2024",
-    whoPost: "admin",
-    title: "Exploring the World of Food and Wine",
-    description:
-      "Efficiently reinvent installed base opportunities after team driven quality vectors. Dramatically for value added partnerships. Holisticly reintermediate client based materials...",
-  },
-  {
-    id: 1,
-    category: "Foodies",
-    calenader: "24 Feb, 2024",
-    whoPost: "admin",
-    title: "What It Takes to Achieve Excellence",
-    description:
-      "Efficiently reinvent installed base opportunities after team driven quality vectors. Dramatically for value added partnerships. Holisticly reintermediate client based materials...",
-  },
-  {
-    id: 1,
-    category: "Foodies",
-    calenader: "24 Feb, 2024",
-    whoPost: "admin",
-    title: "Affordable Gourmet Experiences",
-    description:
-      "Efficiently reinvent installed base opportunities after team driven quality vectors. Dramatically for value added partnerships. Holisticly reintermediate client based materials...",
-  },
-];
+import blogData from "../data/BlogData.js"
+import { Link } from "react-router-dom";
 
 const SearchComp = () => {
   return (
@@ -127,114 +91,11 @@ const CategoriesComp = ({ name }) => {
     </>
   );
 };
-const Blog = () => {
-  return (
+
+export const RigthComp=()=>{
+  return(
     <>
-      <TopComp
-        pageName="News Insights"
-        pageSubtitle="Home / Latest News"
-        pageTitle="Latest News"
-      />
-
-      <div className="bg-white">
-        <div className="md:px-[200px] px-8 py-16 flex gap-13 justify-center max-sm:flex-col ">
-          {/* left */}
-
-          <div className="flex flex-col ">
-            {blogData.map((data, index) => {
-              return (
-                <>
-                  <div className="md:w-[600px] h-[300px] bg-[#D9D9D9] relative">
-                    <div className=" flex justify-center items-center bg-[#CB3A1A] w-[85px] h-[30px] absolute top-5 left-5 uppercase text-[13px] text-white font-semibold ">
-                      {data.category}
-                    </div>
-                  </div>
-                  <div className="px-6 bg-[#F6F6F6] py-3 mb-5">
-                    <div className="flex items-center  md:gap-4 ">
-                      <div className="flex gap-2 items-center">
-                        <svg
-                          width="14"
-                          height="16"
-                          viewBox="0 0 14 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M4.75 2H9.25V0.75C9.25 0.34375 9.5625 0 10 0C10.4062 0 10.75 0.34375 10.75 0.75V2H12C13.0938 2 14 2.90625 14 4V14C14 15.125 13.0938 16 12 16H2C0.875 16 0 15.125 0 14V4C0 2.90625 0.875 2 2 2H3.25V0.75C3.25 0.34375 3.5625 0 4 0C4.40625 0 4.75 0.34375 4.75 0.75V2ZM1.5 14C1.5 14.2812 1.71875 14.5 2 14.5H12C12.25 14.5 12.5 14.2812 12.5 14V6H1.5V14Z"
-                            fill="#CB3A1A"
-                          />
-                        </svg>
-                        <p className="text-[#74787C] text-sm ">
-                          {data.calenader}
-                        </p>
-                      </div>
-                      <div className="flex gap-2 items-center">
-                        <svg
-                          width="14"
-                          height="16"
-                          viewBox="0 0 14 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M8.5 9.5C11.5312 9.5 14 11.9688 14 15C14 15.5625 13.5312 16 13 16H1C0.4375 16 0 15.5625 0 15C0 11.9688 2.4375 9.5 5.5 9.5H8.5ZM1.5 14.5H12.4688C12.2188 12.5312 10.5312 11 8.5 11H5.5C3.4375 11 1.75 12.5312 1.5 14.5ZM7 8C4.78125 8 3 6.21875 3 4C3 1.8125 4.78125 0 7 0C9.1875 0 11 1.8125 11 4C11 6.21875 9.1875 8 7 8ZM7 1.5C5.59375 1.5 4.5 2.625 4.5 4C4.5 5.40625 5.59375 6.5 7 6.5C8.375 6.5 9.5 5.40625 9.5 4C9.5 2.625 8.375 1.5 7 1.5Z"
-                            fill="#CB3A1A"
-                          />
-                        </svg>
-
-                        <p className="text-[#74787C] text-sm">
-                          by {data.whoPost}
-                        </p>
-                      </div>
-                    </div>
-                    <h1 className="uppercase font-bold max-sm:mt-1 py-1 font-Jost text-[18px] md:text-[25px]">
-                      {data.title}
-                    </h1>
-
-                    <p className="text-[#74787C] text-[12px]">
-                      Efficiently reinvent installed base opportunities after
-                      team driven quality vectors. Dramatically for value <br />{" "}
-                      added partnerships. Holisticly reintermediate client based
-                      materials...
-                    </p>
-                    <div className="h-[1px] bg-[#DDDEE1] my-3"></div>
-                    <button className="uppercase font-semibold cursor-pointer font-Jost text-[14px] text-[#CB3A1A] mb-2">
-                      Read Details {">>"}
-                    </button>
-                  </div>
-                </>
-              );
-            })}
-
-            <div className="flex gap-3">
-              <div className="w-[50px] h-[50px] bg-[#CB3A1A] flex justify-center items-center cursor-pointer text-white">
-                1
-              </div>
-              <div className="w-[50px] h-[50px] flex text-black justify-center bg-[#F6F6F6] items-center cursor-pointer">
-                2
-              </div>
-              <div className="w-[50px] h-[50px] flex justify-center items-center cursor-pointer  bg-[#F6F6F6] text-black">
-                3
-              </div>
-              <div className="w-[50px] h-[50px] flex justify-center items-center cursor-pointer  bg-[#F6F6F6] text-black">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8.25 1.21875L13.75 6.46875C13.9062 6.625 14 6.8125 14 7.03125C14 7.21875 13.9062 7.40625 13.75 7.5625L8.25 12.8125C7.96875 13.0938 7.46875 13.0938 7.1875 12.7812C6.90625 12.5 6.90625 12 7.21875 11.7188L11.375 7.78125H0.75C0.3125 7.78125 0 7.4375 0 7.03125C0 6.59375 0.3125 6.28125 0.75 6.28125H11.375L7.21875 2.3125C6.90625 2.03125 6.90625 1.53125 7.1875 1.25C7.46875 0.9375 7.9375 0.9375 8.25 1.21875Z"
-                    fill="#111111"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          {/* right */}
-          <div className="flex flex-col gap-5 max-sm:justify-center max-sm:items-center">
+    <div className="flex flex-col gap-5 max-sm:justify-center max-sm:items-center">
             <SearchComp />
             <div className="bg-[#F6F6F6]  w-[300px] pb-3 ">
               <h1 className="font-bold uppercase px-5 text-[18px] py-4">
@@ -314,6 +175,119 @@ from Renowned Chefs"
               </div>
             </div>
           </div>
+    </>
+  )
+}
+const Blog = () => {
+  return (
+    <>
+      <TopComp
+        pageName="News Insights"
+        pageSubtitle="Home / Latest News"
+        pageTitle="Latest News"
+        
+      />
+
+      <div className="bg-white">
+        <div className="md:px-[200px] px-8 py-16 flex gap-13 justify-center max-sm:flex-col ">
+          {/* left */}
+
+          <div className="flex flex-col ">
+            {blogData.map((data, index) => {
+              return (
+                <>
+                  <div className="md:w-[600px] h-[300px] bg-[#D9D9D9] relative" key={index+"ym"}>
+                    <div className=" flex justify-center items-center bg-[#CB3A1A] w-[85px] h-[30px] absolute top-5 left-5 uppercase text-[13px] text-white font-semibold ">
+                      {data.category}
+                    </div>
+                  </div>
+
+                  <div className="px-6 bg-[#F6F6F6] py-3 mb-5" key={index+"my"}>
+                    <div className="flex items-center  md:gap-4 ">
+                      <div className="flex gap-2 items-center">
+                        <svg
+                          width="14"
+                          height="16"
+                          viewBox="0 0 14 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.75 2H9.25V0.75C9.25 0.34375 9.5625 0 10 0C10.4062 0 10.75 0.34375 10.75 0.75V2H12C13.0938 2 14 2.90625 14 4V14C14 15.125 13.0938 16 12 16H2C0.875 16 0 15.125 0 14V4C0 2.90625 0.875 2 2 2H3.25V0.75C3.25 0.34375 3.5625 0 4 0C4.40625 0 4.75 0.34375 4.75 0.75V2ZM1.5 14C1.5 14.2812 1.71875 14.5 2 14.5H12C12.25 14.5 12.5 14.2812 12.5 14V6H1.5V14Z"
+                            fill="#CB3A1A"
+                          />
+                        </svg>
+                        <p className="text-[#74787C] text-sm ">
+                          {data.calenader}
+                        </p>
+                      </div>
+                      <div className="flex gap-2 items-center">
+                        <svg
+                          width="14"
+                          height="16"
+                          viewBox="0 0 14 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.5 9.5C11.5312 9.5 14 11.9688 14 15C14 15.5625 13.5312 16 13 16H1C0.4375 16 0 15.5625 0 15C0 11.9688 2.4375 9.5 5.5 9.5H8.5ZM1.5 14.5H12.4688C12.2188 12.5312 10.5312 11 8.5 11H5.5C3.4375 11 1.75 12.5312 1.5 14.5ZM7 8C4.78125 8 3 6.21875 3 4C3 1.8125 4.78125 0 7 0C9.1875 0 11 1.8125 11 4C11 6.21875 9.1875 8 7 8ZM7 1.5C5.59375 1.5 4.5 2.625 4.5 4C4.5 5.40625 5.59375 6.5 7 6.5C8.375 6.5 9.5 5.40625 9.5 4C9.5 2.625 8.375 1.5 7 1.5Z"
+                            fill="#CB3A1A"
+                          />
+                        </svg>
+
+                        <p className="text-[#74787C] text-sm">
+                          by {data.whoPost}
+                        </p>
+                      </div>
+                    </div>
+                    <h1 className="uppercase font-bold max-sm:mt-1 py-1 font-Jost text-[18px] md:text-[25px]">
+                      {data.title}
+                    </h1>
+
+                    <p className="text-[#74787C] text-[12px]">
+                      Efficiently reinvent installed base opportunities after
+                      team driven quality vectors. Dramatically for value <br />{" "}
+                      added partnerships. Holisticly reintermediate client based
+                      materials...
+                    </p>
+                    <div className="h-[1px] bg-[#DDDEE1] my-3"></div>
+                    <Link to={`/blog-detail/${data.id}`}  className="uppercase font-semibold cursor-pointer font-Jost text-[14px] text-[#CB3A1A] mb-2">
+                      Read Details {">>"}
+                    </Link>
+                  </div>
+                </>
+              );
+            })}
+
+            <div className="flex gap-3">
+              <div className="w-[50px] h-[50px] bg-[#CB3A1A] flex justify-center items-center cursor-pointer text-white">
+                1
+              </div>
+              <div className="w-[50px] h-[50px] flex text-black justify-center bg-[#F6F6F6] items-center cursor-pointer">
+                2
+              </div>
+              <div className="w-[50px] h-[50px] flex justify-center items-center cursor-pointer  bg-[#F6F6F6] text-black">
+                3
+              </div>
+              <div className="w-[50px] h-[50px] flex justify-center items-center cursor-pointer  bg-[#F6F6F6] text-black">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.25 1.21875L13.75 6.46875C13.9062 6.625 14 6.8125 14 7.03125C14 7.21875 13.9062 7.40625 13.75 7.5625L8.25 12.8125C7.96875 13.0938 7.46875 13.0938 7.1875 12.7812C6.90625 12.5 6.90625 12 7.21875 11.7188L11.375 7.78125H0.75C0.3125 7.78125 0 7.4375 0 7.03125C0 6.59375 0.3125 6.28125 0.75 6.28125H11.375L7.21875 2.3125C6.90625 2.03125 6.90625 1.53125 7.1875 1.25C7.46875 0.9375 7.9375 0.9375 8.25 1.21875Z"
+                    fill="#111111"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          {/* right */}
+          <RigthComp />
         </div>
       </div>
 
