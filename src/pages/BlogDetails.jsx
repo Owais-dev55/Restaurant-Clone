@@ -7,7 +7,7 @@ import imgUrl from "../assets/bg.jpg";
 const CommentComp = ({ name, reply }) => {
   return (
     <>
-      <div className={`mt-6 flex gap-4 ${reply ? "ml-18" : " "} `}>
+      <div className={`mt-6 flex max-sm:flex-col gap-4 ${reply ? "ml-18" : " "} `}>
         <div className="min-w-[90px] min-h-[90px] bg-[#E3E3E3]"></div>
 
         {/* right */}
@@ -61,7 +61,7 @@ const BlogDetails = () => {
           <div className="flex flex-col  ">
             <div className="md:w-[600px] h-[300px] bg-[#D9D9D9] relative"></div>
             <div className=" bg-white py-3 mb-5">
-              <div className="flex items-center   md:gap-4 ">
+              <div className="flex items-center gap-3  md:gap-4 ">
                 <div className="flex gap-2 items-center">
                   <svg
                     width="14"
@@ -118,7 +118,7 @@ const BlogDetails = () => {
               </p>
             </div>
 
-            <div className="bg-[#F6F6F6] flex flex-col justify-center py-6 pl-12 pr-3  gap-4 ">
+            <div className="bg-[#F6F6F6] flex flex-col justify-center py-6  pl-2 md:pl-12 md:pr-3  gap-4 ">
               <div className="rounded-full w-12 h-12 bg-[#CB3A1A] text-white flex justify-center items-center">
                 99
               </div>
@@ -146,9 +146,9 @@ const BlogDetails = () => {
             </p>
 
             <div className="flex gap-2 justify-between items-center mt-5 ">
-              <div className="bg-[#D9D9D9] h-[300px] w-[200px] "></div>
-              <div className="bg-[#D9D9D9] h-[300px] w-[200px]"></div>
-              <div className="bg-[#D9D9D9] h-[300px] w-[200px]"></div>
+              <div className="bg-[#D9D9D9] md:h-[300px]  h-[150px] w-[200px] "></div>
+              <div className="bg-[#D9D9D9] md:h-[300px]  h-[150px] w-[200px]"></div>
+              <div className="bg-[#D9D9D9] md:h-[300px] h-[150px] w-[200px]"></div>
             </div>
             <p className="text-[#74787C] max-sm:text-[12px] font-normal text-[14px] leading-[26px] align-middle tracking-[0] font-jost mt-5">
               Quickly build covalent data after turnkey content. Distinctively
@@ -163,10 +163,10 @@ const BlogDetails = () => {
               through collaborative mindshare create bleeding-edge meta-services
             </p>
 
-            <div className="flex justify-between items-center mt-5 font-jost">
+            <div className="flex justify-between items-center mt-5 font-jost max-sm:flex-col max-sm:gap-3 max-sm:items-start">
               <div className="flex items-center gap-2">
                 <h1 className="font-bold text-black text-sm">Tags</h1>
-                <p className="text-[#74787C] text-sm">
+                <p className="text-[#74787C] max-sm:text-[13px] text-sm">
                   Business Solution, Growth Strenth
                 </p>
               </div>
@@ -229,24 +229,26 @@ const BlogDetails = () => {
 
             <div className="h-[1px] bg-[#D9D9D9] mt-5 mb-5"></div>
 
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between max-sm:gap-4">
               <div className="flex items-center gap-3">
-                <div className="w-[70px] h-[70px] bg-[#D9D9D9] "></div>
-                <p className="font-semibold">Previous Post</p>
+                <div className="md:w-[70px] md:h-[70px] min-w-10 min-h-10 bg-[#D9D9D9] "></div>
+                <p className="font-semibold max-sm:text-[14px]">Previous Post</p>
               </div>
-              <div className="flex gap-1 w-[50px] flex-wrap">
+              <div className="flex gap-1 w-[50px] min-w-5  flex-wrap">
                 {[...Array(6)].map((_, i) => (
-                  <div key={i} className="w-[10px] h-[10px] bg-[#F0F0F0]"></div>
+                  <div key={i} className="min-w-[10px] max-sm:min-w-[5px] max-sm:min-h-[5px] h-[10px] bg-[#F0F0F0]"></div>
                 ))}
               </div>
-              <div className="flex items-center gap-3">
-                <p className="font-semibold">Next Post</p>
-                <div className="w-[70px] h-[70px] bg-[#D9D9D9] "></div>
+          
+              <div className="flex items-center gap-3 max-sm:gap-1">
+              <p className="font-semibold max-sm:text-[14px]">Next Post</p>
+                <div className="md:w-[70px] md:h-[70px] min-w-10 min-h-10 bg-[#D9D9D9] "></div>
+                
               </div>
             </div>
             <div className="h-[1px] bg-[#D9D9D9] mt-5"></div>
 
-            <div className="mt-10 bg-[#F6F6F6] flex items-center gap-3 py-6 px-5 ">
+            <div className="mt-10 bg-[#F6F6F6] flex items-center gap-3 py-6 px-5 max-sm:flex-col ">
               <div className="min-w-[150px] min-h-[150px] bg-[#D9D9D9] "></div>
               <div>
                 <p className="font-semibold">William Benjamin</p>
@@ -287,7 +289,7 @@ const BlogDetails = () => {
                       name=""
                       id=""
                       placeholder="Your Name"
-                      className="bg-white py-2 px-2"
+                      className="bg-white py-2 px-2 max-sm:placeholder:text-sm"
                     />
                     <div className="absolute top-3 right-5">
                       <svg
@@ -311,7 +313,7 @@ const BlogDetails = () => {
                       name=""
                       id=""
                       placeholder="Email Address"
-                      className="bg-white py-2 px-2"
+                      className="bg-white py-2 px-2 max-sm:placeholder:text-sm"
                     />
                     <div className="absolute top-4 right-5">
                       <svg
@@ -336,11 +338,11 @@ const BlogDetails = () => {
                       cols="30"
                       rows="5"
                       placeholder="Type Your Message"
-                      className="bg-white w-full px-3 py-3"
+                      className="bg-white w-full px-3 py-3 max-sm:placeholder:text-sm"
                     ></textarea>
                   </div>
                   <div className="w-full">
-                    <button className="uppercase text-center w-full bg-[#CB3A1A] cursor-pointer font-semibold py-2 text-white">
+                    <button className="uppercase text-center w-full bg-[#CB3A1A] cursor-pointer font-semibold py-2 text-white max-sm:text-sm">
                       submit comment
                     </button>
                   </div>
