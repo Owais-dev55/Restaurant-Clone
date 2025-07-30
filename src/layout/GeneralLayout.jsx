@@ -1,15 +1,13 @@
-import { Outlet } from "react-router-dom"
-import Header from "../components/Headerone"
-import { Menu } from "../components/Menu"
+import { Outlet } from "react-router-dom";
+import Header from "../components/Headerone";
 
 const GeneralLayout = () => {
   return (
     <div>
-        <Header /> 
-        <Menu/>     
-        <Outlet />
+      <Header />
+      <Outlet />
     </div>
-  )
-}
+  );
+};
 
-export default GeneralLayout
+export default GeneralLayout;

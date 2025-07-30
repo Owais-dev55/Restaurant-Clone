@@ -311,6 +311,14 @@ export const Menu = () => {
         </div>
       </div>
     </div>
+    {/* === Bottom CTA === */}
+      <div className="bg-gray-200 p-10 text-center">
+        <p className="text-xs uppercase text-gray-500">Book a table for your and family members</p>
+        <h2 className="text-2xl font-semibold mb-4">NEED A TABLE ON COFFEE HOUSE</h2>
+        <button className="px-6 py-2 border border-gray-700 text-sm text-gray-700 hover:bg-gray-700 hover:text-white transition">
+          BOOK A TABLE
+        </button>
+      </div>
 
 
     </div>
