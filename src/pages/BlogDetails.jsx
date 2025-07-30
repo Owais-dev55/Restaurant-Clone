@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { TopComp, CtaBanner } from "./Reservation";
 import blogData from "../data/BlogData.js";
@@ -44,6 +44,9 @@ const BlogDetails = () => {
   const [reply, setReply] = useState(true);
   const { id } = useParams();
   const blog = blogData.find((b) => b.id == id);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <TopComp
