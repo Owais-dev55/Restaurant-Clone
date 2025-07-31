@@ -8,14 +8,18 @@ import GeneralLayout from "./layout/GeneralLayout";
 import Hometwolayout from "./layout/Hometwolayout";
 import Homethreelayout from "./layout/Homethreelayout";
 
-// Pages
 import Hometwo from "./pages/Hometwo";
-import Homethree from "./pages/Homethree";
+import Homethree from "./pages/Homethree"; 
 import Homeone from "./pages/Homeone";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Team from "./pages/Team";
 import TeamDetails from "./pages/TeamDetails";
+
+
+import { Shop }  from './components/Shop'; 
+import { Menu } from './components/Menu';
+import { ShopDetails } from './components/ShopDetails';
 
 
 function App() {
@@ -28,21 +32,24 @@ function App() {
           <Route path="/" element={<Hometwo />} />
         </Route>
 
-        {/* General Layout - All your new pages go here */}
+        {/* General Layout - Combining all routes under a single GeneralLayout */}
         <Route element={<GeneralLayout />}>
+          {/* Routes from the other branch */}
           <Route path="/home-1" element={<Homeone />} />
-          
-          {/* ==> 2. ADD THE ROUTES FOR YOUR NEW PAGES HERE */}
+          <Route path="/home-1/menu" element={<Menu />} />
+          <Route path="/home-1/shop/:id" element={<ShopDetails />} />
+          <Route path="/home-1/shop" element={<Shop/>}/>
+
+          {/* Your Routes */}
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<Team />} />
           <Route path="/team/:memberId" element={<TeamDetails />} /> 
-          
         </Route>
 
         {/* home-three Layout */}
         <Route element={<Homethreelayout />}> 
-          <Route path="/home-3" element={<Homethree  />} />
+          <Route path="/home-3" element={<Homethree />} />
         </Route>
 
       </Routes>

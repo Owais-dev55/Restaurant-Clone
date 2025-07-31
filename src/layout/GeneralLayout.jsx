@@ -1,13 +1,13 @@
-import { Outlet } from "react-router-dom"
-import Header from "../components/Headerone"
+import { Outlet } from "react-router-dom";
+import Header from "../components/Headerone";
 
 const GeneralLayout = () => {
   return (
     <div>
-        <Header />      
-        <Outlet />
+      <Header />
+      <Outlet />
     </div>
-  )
-}
+  );
+};
 
-export default GeneralLayout
+export default GeneralLayout;
