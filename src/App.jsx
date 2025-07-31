@@ -4,7 +4,7 @@ import GeneralLayout from "./layout/GeneralLayout";
 import Hometwo from "./pages/Hometwo";
 import Hometwolayout from "./layout/Hometwolayout";
 import Homethreelayout from "./layout/Homethreelayout";
-import Homethree from "./pages/Homethree";
+import Homethree from "./pages/HomeThree";
 import Homeone from "./pages/Homeone";
 import Reservation from "./pages/Reservation.jsx"
 import Blog from "./pages/Blog";
