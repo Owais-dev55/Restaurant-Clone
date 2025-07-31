@@ -2,8 +2,7 @@ import React from 'react';
 
 export const Menu = () => {
   return (
-    <div className="bg-gray-100 min-h-screen  space-y-10">
-      
+    <div className="bg-gray-100 min-h-screen  space-y-10">     
       {/* === Header Section === */}
       <div className="bg-gray-500 shadow-md flex flex-col justify-center items-center p-8 space-y-6 ">
         <h1 className="text-white font-bold font-sans text-4xl">FOOD MENU PAGE</h1>
