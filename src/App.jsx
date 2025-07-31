@@ -10,7 +10,7 @@ import Homethreelayout from "./layout/Homethreelayout";
 import Homethree from "./pages/Homethree";
 import Homeone from "./pages/Homeone";
 import { ShopDetails } from './components/ShopDetails';
-import Shop from './components/Shop'; 
+import {Shop }  from './components/Shop'; 
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
         <Route element={<GeneralLayout />}>
           <Route path="/home-1" element={<Homeone />} />
           <Route path="/home-1/menu" element={<Menu />} />
-          <Route path="/home-1/shopdetails" element={<ShopDetails />} />
+          <Route path="/home-1/shop/:id" element={<ShopDetails />} />
           <Route path="home-1/shop" element={<Shop/>}/>
 
         </Route>

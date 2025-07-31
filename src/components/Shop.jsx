@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const menuItems = [
   {
@@ -63,28 +64,29 @@ const menuItems = [
   },
 ];
 
-const Shop = () => {
+export const Shop = () => {
   return (
-
     <div className="bg-white min-h-screen flex flex-col justify-between">
-        <div className="bg-gray-500 shadow-md flex flex-col justify-center items-center p-8 space-y-6 ">
+      <div className="bg-gray-500 shadow-md flex flex-col justify-center items-center p-8 space-y-6 ">
         <h1 className="text-white font-bold font-sans text-4xl">SHOP PAGE</h1>
         <h2 className="text-white text-lg">Home / Shop Page</h2>
         <h1 className="text-6xl font-extrabold text-transparent uppercase tracking-widest stroke-text">
-         OUR SHOP PAGE
+          OUR SHOP PAGE
         </h1>
       </div>
+
       {/* === Menu Grid === */}
-      <div className="p-10 grid grid-cols-4 gap-6">
+      <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {menuItems.map((item, index) => (
-          <div key={index} className="bg-white shadow rounded overflow-hidden text-center">
+          <Link to={`/home-1/shop/${index}`} key={index}
+ className="bg-white shadow rounded overflow-hidden text-center hover:scale-105 transition-transform">
             <img src={item.image} alt={item.name} className="w-full h-40 object-cover" />
             <div className="py-4">
               <p className="text-red-600 text-sm mb-1">★★★★★</p>
               <h2 className="font-semibold text-sm">{item.name}</h2>
               <p className="text-red-600 text-sm">{item.price}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
@@ -99,5 +101,3 @@ const Shop = () => {
     </div>
   );
 };
-
-export default Shop;
