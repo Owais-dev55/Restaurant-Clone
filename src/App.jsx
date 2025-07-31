@@ -6,6 +6,9 @@ import Hometwolayout from "./layout/Hometwolayout";
 import Homethreelayout from "./layout/Homethreelayout";
 import Homethree from "./pages/HomeThree";
 import Homeone from "./pages/Homeone";
+            import {Shop }  from './components/Shop'; 
+import { Menu } from './components/Menu';
+import {ShopDetails} from './components/ShopDetails'
 
   function App() {
     return (
@@ -20,6 +23,10 @@ import Homeone from "./pages/Homeone";
           {/* General Layout */}
           <Route element={<GeneralLayout />}>
             <Route path="/home-1" element={<Homeone />} />
+<Route path="/home-1/menu" element={<Menu />} />
+          <Route path="/home-1/shop/:id" element={<ShopDetails />} />
+          <Route path="home-1/shop" element={<Shop/>}/>
+
           </Route>
 
           {/* home-three Layout */}
