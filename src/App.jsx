@@ -7,7 +7,7 @@ import GeneralLayout from "./layout/GeneralLayout";
 import Hometwo from "./pages/Hometwo";
 import Hometwolayout from "./layout/Hometwolayout";
 import Homethreelayout from "./layout/Homethreelayout";
-import Homethree from "./pages/Homethree";
+import Homethree from "./pages/HomeThree";
 import Homeone from "./pages/Homeone";
 import { ShopDetails } from './components/ShopDetails';
 import {Shop }  from './components/Shop'; 
