@@ -32,15 +32,11 @@ function App() {
           <Route path="/" element={<Hometwo />} />
         </Route>
 
-        {/* General Layout - Combining all routes under a single GeneralLayout */}
         <Route element={<GeneralLayout />}>
-          {/* Routes from the other branch */}
           <Route path="/home-1" element={<Homeone />} />
           <Route path="/home-1/menu" element={<Menu />} />
           <Route path="/home-1/shop/:id" element={<ShopDetails />} />
           <Route path="/home-1/shop" element={<Shop/>}/>
-
-          {/* Your Routes */}
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<Team />} />
