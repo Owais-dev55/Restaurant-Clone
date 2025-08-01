@@ -1,7 +1,5 @@
 import React, {useState} from "react";
-import Headerthree from "../components/Headerthree";
-import vector from "../assets/vector.png";
-import Footer from "../components/Footer";
+import vector from "../assets/Vector.png";
 import { FaCheck } from "react-icons/fa";
 import texture from "../assets/texture.jpg";
 
