@@ -34,9 +34,9 @@ function App() {
 
         <Route element={<GeneralLayout />}>
           <Route path="/home-1" element={<Homeone />} />
-          <Route path="/home-1/menu" element={<Menu />} />
+          <Route path="/menu" element={<Menu />} />
           <Route path="/home-1/shop/:id" element={<ShopDetails />} />
-          <Route path="/home-1/shop" element={<Shop/>}/>
+          <Route path="/shop" element={<Shop/>}/>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<Team />} />
