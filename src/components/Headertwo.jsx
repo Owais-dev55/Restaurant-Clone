@@ -52,7 +52,7 @@ const Headertwo = () => {
   const dropdownData = {
     pages: [
       { name: "About Us", href: "/about" },
-      { name: "Food", href: "/" },
+      { name: "Food", href: "/home-1" },
       { name: "Order", href: "/home-3" },
     ],
     shop: [
@@ -108,7 +108,7 @@ const Headertwo = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex space-x-6 font-medium text-sm relative">
-              <Link to="/home-1" className="hover:text-orange-500 cursor-pointer transition-colors">
+              <Link to="/" className="hover:text-orange-500 cursor-pointer transition-colors">
                 HOME
               </Link>
 

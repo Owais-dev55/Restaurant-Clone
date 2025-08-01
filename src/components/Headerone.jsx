@@ -46,7 +46,7 @@ const Header = () => {
   const dropdownData = {
     pages: [
       { name: "About Us", href: "/about" },
-      { name: "Food", href: "/" },
+      { name: "Food", href: "/home-1" },
       { name: "Order", href: "/home-3" },
     ],
     shop: [
@@ -78,7 +78,7 @@ const Header = () => {
         </div>
         <ul className="hidden md:flex space-x-6 text-sm font-medium uppercase tracking-wide mt-4 md:mt-0 relative">
           <li>
-            <Link to="/home-1" className="hover:text-orange-500">
+            <Link to="/" className="hover:text-orange-500">
               Home
             </Link>
           </li>
@@ -199,7 +199,6 @@ const Header = () => {
                 ))}
               </div>
             </div>
-
             <div>
               <div className="text-white font-medium mb-2">Shop</div>
               <div className="pl-4 space-y-2">
@@ -214,11 +213,9 @@ const Header = () => {
                 ))}
               </div>
             </div>
-
             <Link to="/team" className="block text-white hover:text-orange-500">
               Team
             </Link>
-
             <Link
               to="/contact"
               className="block text-white hover:text-orange-500"

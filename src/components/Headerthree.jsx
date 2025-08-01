@@ -51,7 +51,7 @@ const HeaderThree = () => {
   const dropdownData = {
     pages: [
       { name: "About Us", href: "/about" },
-      { name: "Food", href: "/" },
+      { name: "Food", href: "/home-1" },
       { name: "Order", href: "#" },
     ],
     shop: [
@@ -76,7 +76,7 @@ const HeaderThree = () => {
 
       <nav className="bg-black text-white py-4 px-6 flex items-center justify-between relative">
         <div>
-          <Link to="/home-1">
+          <Link to="/">
             <img src={logo3 || "/placeholder.svg"} alt="Delish Logo" className="h-10" />
           </Link>
         </div>
