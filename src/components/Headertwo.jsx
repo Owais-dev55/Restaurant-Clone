@@ -54,10 +54,13 @@ const Headertwo = () => {
       { name: "About Us", href: "/about" },
       { name: "Food", href: "/home-1" },
       { name: "Order", href: "/home-3" },
+        { name: "Gallery", href: "/gallery" },
+
     ],
     shop: [
       { name: "Menu", href: "/menu" },
       { name: "shop", href: "/shop" },
+      { name: "Reservation", href: "/reservation" },
     ],
   }
 
@@ -167,6 +170,9 @@ const Headertwo = () => {
               <Link to="/team" className="hover:text-orange-500 cursor-pointer transition-colors">
                 TEAM
               </Link>
+               <Link to="/blog" className="hover:text-orange-500 cursor-pointer transition-colors">
+                BLOG
+              </Link>
               <Link to="/contact" className="hover:text-orange-500 cursor-pointer transition-colors">
                 CONTACT
               </Link>
@@ -236,6 +242,13 @@ const Headertwo = () => {
                   >
                     TEAM
                   </Link>
+                  <Link
+                    to="/blog"
+                    className="hover:text-orange-500 cursor-pointer transition-colors"
+                    onClick={handleMobileLinkClick}
+                  >
+                    BLOG
+                  </Link> 
                   <Link
                     to="/contact"
                     className="hover:text-orange-500 cursor-pointer transition-colors"

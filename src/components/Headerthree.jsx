@@ -53,10 +53,12 @@ const HeaderThree = () => {
       { name: "About Us", href: "/about" },
       { name: "Food", href: "/home-1" },
       { name: "Order", href: "#" },
+      { name: "Gallery", href: "/gallery" },
     ],
     shop: [
       { name: "Menu", href: "/menu" },
       { name: "shop", href: "/shop" },
+      { name: "Reservation", href: "/reservation" },
     ],
   }
 
@@ -150,6 +152,11 @@ const HeaderThree = () => {
             </Link>
           </li>
           <li>
+            <Link to="/blog" className="hover:text-orange-500 transition-colors">
+              Blog
+            </Link>
+          </li>
+          <li>
             <Link to="/contact" className="hover:text-orange-500 transition-colors">
               Contact
             </Link>
@@ -215,6 +222,14 @@ const HeaderThree = () => {
               >
                 Team
               </Link>
+                <Link
+                to="/blog"
+                className="block text-white hover:text-orange-500 transition-colors"
+                onClick={handleMobileLinkClick}
+              >
+                Blog
+              </Link>
+
               <Link
                 to="/contact"
                 className="block text-white hover:text-orange-500 transition-colors"

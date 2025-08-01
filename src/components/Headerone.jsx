@@ -48,10 +48,12 @@ const Header = () => {
       { name: "About Us", href: "/about" },
       { name: "Food", href: "/home-1" },
       { name: "Order", href: "/home-3" },
+      { name: "Gallery", href: "/gallery" },
     ],
     shop: [
       { name: "Menu", href: "/menu" },
       { name: "shop", href: "/shop" },
+      { name: "Reservation", href: "/reservation" },
     ],
   };
 
@@ -144,6 +146,11 @@ const Header = () => {
               Team
             </Link>
           </li>
+                    <li>
+            <Link to="/blog" className="hover:text-orange-500">
+              Blog
+            </Link>
+          </li>
           <li>
             <Link to="/contact" className="hover:text-orange-500">
               Contact
@@ -215,6 +222,10 @@ const Header = () => {
             </div>
             <Link to="/team" className="block text-white hover:text-orange-500">
               Team
+            </Link>
+                <Link to="/blog"    className="block text-white hover:text-orange-500"
+          >
+              Blog
             </Link>
             <Link
               to="/contact"
