@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import { FaMapMarkerAlt, FaSearch, FaUser, FaHeart, FaShoppingCart, FaBars, FaTimes } from "react-icons/fa"
@@ -50,7 +48,7 @@ const Headertwo = () => {
   }
 
   const dropdownData = {
-    pages: [
+       pages: [
       { name: "About Us", href: "/about" },
       { name: "Food", href: "/home-1" },
       { name: "Order", href: "/home-3" },
@@ -65,7 +63,7 @@ const Headertwo = () => {
   }
 
   return (
-    <div className="w-full py-4">
+    <div className="w-full">
       <header className="text-white font-light">
         {/* Top Bar */}
         <div className="bg-black py-2 px-4 sm:px-6">
@@ -170,7 +168,7 @@ const Headertwo = () => {
               <Link to="/team" className="hover:text-orange-500 cursor-pointer transition-colors">
                 TEAM
               </Link>
-               <Link to="/blog" className="hover:text-orange-500 cursor-pointer transition-colors">
+                <Link to="/blog" className="hover:text-orange-500 cursor-pointer transition-colors">
                 BLOG
               </Link>
               <Link to="/contact" className="hover:text-orange-500 cursor-pointer transition-colors">
@@ -248,7 +246,8 @@ const Headertwo = () => {
                     onClick={handleMobileLinkClick}
                   >
                     BLOG
-                  </Link> 
+                  </Link>
+
                   <Link
                     to="/contact"
                     className="hover:text-orange-500 cursor-pointer transition-colors"
